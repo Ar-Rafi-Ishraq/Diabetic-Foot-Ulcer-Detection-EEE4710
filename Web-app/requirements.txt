@@ -1,4 +1,0 @@
-open this folder in Terminal
-
-then run following command: 
-streamlit run app.py
