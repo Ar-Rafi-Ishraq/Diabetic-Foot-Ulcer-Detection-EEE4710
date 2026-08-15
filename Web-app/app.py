@@ -18,7 +18,13 @@ st.write("Upload a foot image to get prediction and Grad-CAM visualization.")
 
 # LOAD MODEL
 
-MODEL_PATH = "mobilenetv2_binary_v3.h5"
+from pathlib import Path
+
+MODEL_PATH = (
+    Path(__file__).resolve().parent.parent
+    / "Models"
+    / "mobilenetv2_binary_v3.h5"
+)
 last_conv_layer_name = "out_relu"
 
 @st.cache_resource
